@@ -1,6 +1,8 @@
 package br.com.mariojp.mobile.aula1;
 
-public class Tarefa {
+import java.io.Serializable;
+
+public class Tarefa implements Serializable {
 
     private String titulo;
     private String descricao;
