@@ -30,6 +30,7 @@ public class AdicionarTarefa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_tarefa);
+        getSupportActionBar().hide();
         getElements();
         checkIntent();
 
@@ -95,4 +96,12 @@ public class AdicionarTarefa extends AppCompatActivity {
         priority = findViewById(R.id.textViewPrioridade);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
